@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Pizzeria.UserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Pizzeria"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Height="auto" Width="auto">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitioningContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <StackPanel>
+                    <TextBlock Text="Duży wybór pizz" FontSize="25" FontFamily="Cooper Black" Foreground="#FFC00000" Margin="15" />
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Od 25 ZŁ" FontSize="50" FontFamily="Cooper Black" Foreground="#FFC00000" />
+                        <TextBlock Text="Tanio!" FontSize="25" FontFamily="Cooper Black" Foreground="#FFC00000" Margin="5" />
+                        <TextBlock Text="Naprawdę smaczna!" FontSize="25" FontFamily="Cooper Black" Foreground="#FFC00000" Margin="5" />
+                        <TextBlock FontSize="18" Width="250" FontFamily="Cooper Black" Foreground="Black" Margin="5" TextWrapping="Wrap">
+                               Pizza – potrawa kuchni włoskiej, obecnie szeroko rozpowszechniona na całym świecie. 
+                            Jest to płaski placek z ciasta drożdżowego (focaccia), z sosem pomidorowym, posypany tartym serem 
+                            (najczęściej jest to mozzarella) i ziołami, pieczony w bardzo mocno nagrzanym piecu.
+                            
+                        </TextBlock>
+                    </StackPanel>
+
+                    
+                </StackPanel>
+                <Image Margin="10" Width="200" Height="350" Source="Assets/09-calabrese-tradizionale.jpg" Stretch="UniformToFill" />
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

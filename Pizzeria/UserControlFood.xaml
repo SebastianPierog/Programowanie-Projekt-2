@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="Pizzeria.UserControlFood"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Pizzeria"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Height="auto" Width="auto">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Height="300" Background="#FFF3F3F3" Margin="10">
+                    <Grid.Effect>
+                        <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" ShadowDepth="1"/>
+                    </Grid.Effect>
+
+                    <StackPanel Width="200">
+                        <TextBlock Margin="10" FontFamily="Showcard Gothic" FontSize="12" Text="Capricciosa" Foreground="#FFC00000"/>
+                        <Image Source="Assets/pizzabar.jpg" Width="200" Height="150" Stretch="UniformToFill" />
+                        <TextBlock FontSize="11" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines">
+                            Pizza capricciosa – rodzaj pizzy w kuchni włoskiej, ze składnikami: ser mozzarella, pieczona szynka, grzyby (m.in. pieczarki), karczochy i pomidory.
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            
+                            <TextBlock  Text="25 zł" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"/>
+                            <Button x:Name="AddCapricciosa" Width="100" Content="Zamów" FontFamily="Champagne &amp; Limousines" Margin="10" Click="ButtonAddCapricciosa" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1" Height="300" Background="#FFF3F3F3" Margin="10">
+                    <Grid.Effect>
+                        <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" ShadowDepth="1"/>
+                    </Grid.Effect>
+
+                    <StackPanel Width="200">
+                        <TextBlock Margin="10" FontFamily="Showcard Gothic" FontSize="12" Text="Margheritta" Foreground="#FFC00000"/>
+                        <Image Source="Assets/size_960_16_9_pizza2.jpg" Width="200" Height="150" Stretch="UniformToFill" />
+                        <TextBlock FontSize="11" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines">
+                            Pizza Margherita – krótka historia najsłynniejszej pizzy świata. Raffaele przygotował dla królowej pizzę. 
+                            
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="27 zł" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"/>
+                            <Button x:Name="AddMargheritta" Width="100" Content="Zamów" FontFamily="Champagne &amp; Limousines" Margin="15" Click="ButtonAddMargheritta" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="2" Height="300" Background="#FFF3F3F3" Margin="10">
+                    <Grid.Effect>
+                        <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" ShadowDepth="1"/>
+                    </Grid.Effect>
+
+                    <StackPanel Width="200">
+                        <TextBlock Margin="10" FontFamily="Showcard Gothic" FontSize="12" Text="Wiejska" Foreground="#FFC00000"/>
+                        <Image Source="Assets/Pizza-doce-de-Brigadeiro.jpg" Width="200" Height="150" Stretch="UniformToFill" />
+                        <TextBlock FontSize="11" Margin="5" TextWrapping="Wrap" FontFamily="Champagne &amp; Limousines">
+                           Właśnie dla amatorów takich smaków przygotowałem przepis na pizzę wiejską. Kilka rodzajów wędlin.
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="29 zł" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Champagne &amp; Limousines"/>
+                            <Button x:Name="AddWiejska" Width="100" Content="Zamów" FontFamily="Champagne &amp; Limousines" Margin="10" Click="ButtonAddWiejska"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
